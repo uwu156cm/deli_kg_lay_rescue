@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NewJeans - Attention inst.mp3-be8ed3cb340554ec89daa71b6046fdb3.mp3str"
+
+[deps]
+
+source_file="res://audios/NewJeans - Attention inst.mp3"
+dest_files=[ "res://.import/NewJeans - Attention inst.mp3-be8ed3cb340554ec89daa71b6046fdb3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

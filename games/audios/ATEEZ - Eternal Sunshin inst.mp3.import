@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ATEEZ - Eternal Sunshin inst.mp3-4cc5f6b981526300dbcaca7f0c7a7a0d.mp3str"
+
+[deps]
+
+source_file="res://audios/ATEEZ - Eternal Sunshin inst.mp3"
+dest_files=[ "res://.import/ATEEZ - Eternal Sunshin inst.mp3-4cc5f6b981526300dbcaca7f0c7a7a0d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

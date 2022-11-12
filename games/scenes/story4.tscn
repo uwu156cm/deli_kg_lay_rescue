@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://buttons/previous.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/story4.gd" type="Script" id=2]
+[ext_resource path="res://buttons/close.tscn" type="PackedScene" id=3]
+[ext_resource path="res://buttons/game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://background/Asset 1720 px.jpg" type="Texture" id=5]
+[ext_resource path="res://Player/For Chatacter/deli kg2.png" type="Texture" id=6]
+[ext_resource path="res://buttons & options/buttonSelected.png" type="Texture" id=7]
+[ext_resource path="res://fonts/boorsok.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 8 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="previous" parent="bg" instance=ExtResource( 1 )]
+margin_left = 1133.0
+margin_top = 38.0
+margin_right = 1255.0
+margin_bottom = 159.0
+
+[node name="close" parent="bg" instance=ExtResource( 3 )]
+margin_left = 6.0
+margin_top = 38.0
+margin_right = 128.0
+margin_bottom = 160.0
+
+[node name="game" parent="bg" instance=ExtResource( 4 )]
+margin_left = 131.0
+margin_top = 38.0
+margin_right = 253.0
+margin_bottom = 160.0
+
+[node name="player" type="TextureRect" parent="bg"]
+margin_left = 140.0
+margin_top = 395.0
+margin_right = 435.0
+margin_bottom = 688.0
+rect_rotation = 31.1
+texture = ExtResource( 6 )
+expand = true
+
+[node name="textbox" type="TextureRect" parent="bg"]
+margin_left = 303.0
+margin_top = 506.0
+margin_right = 1032.0
+margin_bottom = 682.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="dialogue" type="RichTextLabel" parent="bg/textbox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 29.0
+margin_top = 22.0
+margin_right = -29.0
+margin_bottom = -36.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/mono_font = SubResource( 1 )
+bbcode_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
+[connection signal="pressed" from="bg/previous" to="." method="_on_previous_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

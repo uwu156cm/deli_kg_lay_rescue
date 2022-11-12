@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/red flavor.mp3-48e95323b8505ac7899e3b2c2d51be05.mp3str"
+
+[deps]
+
+source_file="res://audios/red flavor.mp3"
+dest_files=[ "res://.import/red flavor.mp3-48e95323b8505ac7899e3b2c2d51be05.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

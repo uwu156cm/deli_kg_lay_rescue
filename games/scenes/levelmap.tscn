@@ -1,0 +1,507 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://fonts/boorsok.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://map/arrow5@4x.png" type="Texture" id=2]
+[ext_resource path="res://map/arrow3@4x.png" type="Texture" id=3]
+[ext_resource path="res://map/coming soon@4x.png" type="Texture" id=4]
+[ext_resource path="res://map/summer@2x.png" type="Texture" id=5]
+[ext_resource path="res://map/halloween@2x.png" type="Texture" id=6]
+[ext_resource path="res://map/Asset 2@4x.png" type="Texture" id=7]
+[ext_resource path="res://map/winter@2x.png" type="Texture" id=8]
+[ext_resource path="res://map/ribbon@3x.png" type="Texture" id=9]
+[ext_resource path="res://map/Sky.png" type="Texture" id=10]
+[ext_resource path="res://scripts/levelmap.gd" type="Script" id=11]
+[ext_resource path="res://map/cloud7@4x.png" type="Texture" id=12]
+[ext_resource path="res://map/treeDead.png" type="Texture" id=14]
+[ext_resource path="res://map/treeSnow.png" type="Texture" id=15]
+[ext_resource path="res://map/cloud1@4x.png" type="Texture" id=16]
+[ext_resource path="res://map/cloud6@4x.png" type="Texture" id=17]
+[ext_resource path="res://summer/Flower-2.png" type="Texture" id=18]
+[ext_resource path="res://summer/Flower-3.png" type="Texture" id=19]
+[ext_resource path="res://summer/Flower-1.png" type="Texture" id=20]
+[ext_resource path="res://buttons & options/Asset 1@4x.png" type="Texture" id=21]
+[ext_resource path="res://map/cluod2@4x.png" type="Texture" id=22]
+[ext_resource path="res://summer/foliagePack_062.png" type="Texture" id=23]
+[ext_resource path="res://map/skeleton@3x.png" type="Texture" id=24]
+[ext_resource path="res://summer/foliagePack_059.png" type="Texture" id=25]
+[ext_resource path="res://girl/candy-girl-game-sprites__2.png" type="Texture" id=26]
+[ext_resource path="res://summer/foliagePack_057.png" type="Texture" id=27]
+[ext_resource path="res://map/bat@4x.png" type="Texture" id=28]
+[ext_resource path="res://map/dead tree@4x.png" type="Texture" id=30]
+[ext_resource path="res://map/Tree_1.png" type="Texture" id=31]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 2
+emission_box_extents = Vector3( 200, 1, 50 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 31
+outline_size = 4
+font_data = ExtResource( 1 )
+
+[node name="levelselect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+
+[node name="map" type="TextureRect" parent="."]
+margin_right = 1282.0
+margin_bottom = 731.0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -508.0
+margin_top = -350.5
+margin_right = 508.0
+margin_bottom = 350.5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 1016.0
+margin_bottom = 701.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 7 )
+expand = true
+
+[node name="ribbon" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = -79.0
+margin_top = 592.5
+margin_right = 252.0
+margin_bottom = 698.5
+texture = ExtResource( 9 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 30.0
+margin_top = -43.0
+margin_right = 326.0
+margin_bottom = 257.0
+
+[node name="summer" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 278.0
+mouse_default_cursor_shape = 2
+icon = ExtResource( 5 )
+flat = true
+icon_align = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+margin_top = 282.0
+margin_right = 296.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.976471, 0.678431, 0.0313726, 1 )
+custom_colors/font_color_shadow = Color( 0.976471, 0.678431, 0.0313726, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Summer"
+align = 1
+valign = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -359.5
+margin_right = -44.0
+margin_bottom = -81.5
+
+[node name="winter" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer2"]
+margin_right = 244.0
+margin_bottom = 256.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 3
+icon = ExtResource( 8 )
+flat = true
+icon_align = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer2"]
+margin_top = 260.0
+margin_right = 244.0
+margin_bottom = 278.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.231373, 0.513726, 0.564706, 1 )
+custom_colors/font_color_shadow = Color( 0.529412, 0.643137, 0.662745, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Winter"
+align = 1
+valign = 1
+
+[node name="Particles2D" type="Particles2D" parent="HBoxContainer/TextureRect/VBoxContainer2"]
+position = Vector2( 133, 4.5 )
+amount = 75
+lifetime = 2.2
+speed_scale = 2.28
+process_material = SubResource( 2 )
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -53.0
+margin_top = 255.0
+margin_right = 149.0
+margin_bottom = 459.0
+
+[node name="coming soon1" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer3"]
+margin_right = 202.0
+margin_bottom = 204.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 3
+disabled = true
+icon = ExtResource( 6 )
+flat = true
+icon_align = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer3"]
+margin_top = 208.0
+margin_right = 202.0
+margin_bottom = 226.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.439216, 0.337255, 0.109804, 1 )
+custom_colors/font_color_shadow = Color( 0.439216, 0.337255, 0.109804, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Coming Soon"
+align = 1
+valign = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = 8.5
+margin_right = -46.0
+margin_bottom = 239.5
+
+[node name="coming soon2" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer4"]
+margin_right = 244.0
+margin_bottom = 217.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 3
+disabled = true
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+
+[node name="Label4" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer4"]
+margin_top = 221.0
+margin_right = 244.0
+margin_bottom = 239.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.447059, 0.501961, 0.572549, 1 )
+custom_colors/font_color_shadow = Color( 0.447059, 0.501961, 0.572549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Coming Soon"
+align = 1
+valign = 1
+
+[node name="arrow1" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 641.0
+margin_top = 424.0
+margin_right = 762.0
+margin_bottom = 494.0
+texture = ExtResource( 2 )
+expand = true
+flip_v = true
+
+[node name="arrow2" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 105.0
+margin_top = 182.0
+margin_right = 230.0
+margin_bottom = 336.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="arrow3" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 453.0
+margin_top = 178.5
+margin_right = 754.0
+margin_bottom = 404.5
+texture = ExtResource( 3 )
+expand = true
+flip_h = true
+
+[node name="cloud" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = -47.0
+margin_top = 12.5
+margin_right = 231.0
+margin_bottom = 172.5
+texture = ExtResource( 12 )
+expand = true
+
+[node name="red ribbon" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 673.0
+margin_top = 17.5
+margin_right = 1062.0
+margin_bottom = 287.5
+texture = ExtResource( 21 )
+expand = true
+flip_h = true
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/red ribbon"]
+margin_left = 51.0
+margin_top = 51.0
+margin_right = 363.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 0.979175, 0.69783, 0.0870166, 1 )
+custom_colors/font_outline_modulate = Color( 0.980392, 0.941176, 0.941176, 1 )
+custom_colors/font_color_shadow = Color( 0.356863, 0.247059, 0.00784314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Select Location"
+align = 1
+valign = 1
+
+[node name="cloud2" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = -100.0
+margin_top = 168.5
+margin_right = 85.0
+margin_bottom = 230.5
+texture = ExtResource( 16 )
+expand = true
+flip_h = true
+
+[node name="girl" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 616.0
+margin_top = -2.5
+margin_right = 760.0
+margin_bottom = 199.5
+texture = ExtResource( 26 )
+expand = true
+flip_h = true
+
+[node name="cloud3" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 802.0
+margin_top = 145.5
+margin_right = 1089.0
+margin_bottom = 269.5
+texture = ExtResource( 22 )
+expand = true
+
+[node name="Node" type="Node2D" parent="HBoxContainer/TextureRect"]
+
+[node name="dry tree" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 569.0
+margin_top = 537.5
+margin_right = 684.0
+margin_bottom = 688.5
+texture = ExtResource( 14 )
+expand = true
+
+[node name="dry tree2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 545.0
+margin_top = 600.5
+margin_right = 633.0
+margin_bottom = 687.5
+texture = ExtResource( 14 )
+expand = true
+flip_h = true
+
+[node name="dry tree3" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 489.0
+margin_top = 610.5
+margin_right = 546.0
+margin_bottom = 689.5
+texture = ExtResource( 14 )
+expand = true
+flip_h = true
+
+[node name="dry tree4" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 458.0
+margin_top = 537.5
+margin_right = 515.0
+margin_bottom = 687.5
+texture = ExtResource( 14 )
+expand = true
+flip_h = true
+
+[node name="snow tree" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 263.0
+margin_top = 58.5
+margin_right = 283.0
+margin_bottom = 113.5
+texture = ExtResource( 15 )
+expand = true
+
+[node name="snow tree2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 260.0
+margin_top = 87.5
+margin_right = 283.0
+margin_bottom = 119.5
+texture = ExtResource( 15 )
+expand = true
+
+[node name="snow tree3" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 415.0
+margin_top = 52.5
+margin_right = 452.0
+margin_bottom = 117.5
+texture = ExtResource( 15 )
+expand = true
+
+[node name="flower1" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 247.0
+margin_top = 397.0
+margin_right = 262.0
+margin_bottom = 411.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="flower2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 248.0
+margin_top = 378.5
+margin_right = 263.0
+margin_bottom = 392.5
+texture = ExtResource( 18 )
+expand = true
+flip_h = true
+
+[node name="rocks2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 322.0
+margin_top = 538.5
+margin_right = 397.0
+margin_bottom = 604.5
+texture = ExtResource( 27 )
+expand = true
+
+[node name="rocks" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 259.0
+margin_top = 523.5
+margin_right = 350.0
+margin_bottom = 631.5
+texture = ExtResource( 25 )
+expand = true
+
+[node name="rocks3" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 180.0
+margin_top = 211.5
+margin_right = 251.0
+margin_bottom = 282.5
+texture = ExtResource( 23 )
+expand = true
+
+[node name="rocks4" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 328.0
+margin_top = 319.5
+margin_right = 389.0
+margin_bottom = 386.5
+texture = ExtResource( 23 )
+expand = true
+flip_h = true
+
+[node name="flower3" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 223.0
+margin_top = 389.0
+margin_right = 237.0
+margin_bottom = 398.0
+texture = ExtResource( 19 )
+expand = true
+
+[node name="skeleton" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 432.0
+margin_top = 389.5
+margin_right = 487.0
+margin_bottom = 444.5
+texture = ExtResource( 24 )
+
+[node name="bat" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 755.0
+margin_top = 264.5
+margin_right = 868.0
+margin_bottom = 330.5
+texture = ExtResource( 28 )
+expand = true
+
+[node name="bat2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 448.0
+margin_top = 271.5
+margin_right = 508.0
+margin_bottom = 310.5
+texture = ExtResource( 28 )
+expand = true
+
+[node name="road tree1" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 474.0
+margin_top = 90.0
+margin_right = 583.0
+margin_bottom = 206.0
+texture = ExtResource( 31 )
+expand = true
+
+[node name="road tree2" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 474.0
+margin_top = 90.0
+margin_right = 583.0
+margin_bottom = 206.0
+texture = ExtResource( 31 )
+expand = true
+
+[node name="road tree3" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 503.0
+margin_top = 97.5
+margin_right = 612.0
+margin_bottom = 213.5
+texture = ExtResource( 31 )
+expand = true
+
+[node name="road tree4" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 534.0
+margin_top = 138.5
+margin_right = 629.0
+margin_bottom = 223.5
+texture = ExtResource( 31 )
+expand = true
+
+[node name="road tree6" type="TextureRect" parent="HBoxContainer/TextureRect/Node"]
+margin_left = 682.0
+margin_top = 407.5
+margin_right = 724.0
+margin_bottom = 470.5
+texture = ExtResource( 30 )
+expand = true
+
+[node name="road tree5" type="TextureRect" parent="HBoxContainer/TextureRect/Node/road tree6"]
+margin_left = 11.0
+margin_top = -27.0
+margin_right = 74.0
+margin_bottom = 66.0
+texture = ExtResource( 30 )
+expand = true
+
+[node name="cloud4" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 406.0
+margin_top = -4.5
+margin_right = 623.0
+margin_bottom = 65.5
+texture = ExtResource( 17 )
+expand = true
+
+[node name="cloud6" type="TextureRect" parent="HBoxContainer/TextureRect"]
+margin_left = 543.0
+margin_top = 241.5
+margin_right = 705.0
+margin_bottom = 284.5
+texture = ExtResource( 22 )
+expand = true
+
+[connection signal="pressed" from="HBoxContainer/TextureRect/VBoxContainer/summer" to="." method="_on_summer_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureRect/VBoxContainer2/winter" to="." method="_on_winter_pressed"]

@@ -1,0 +1,158 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/game over winter.gd" type="Script" id=1]
+[ext_resource path="res://buttons & options/Blank (2).png" type="Texture" id=2]
+[ext_resource path="res://buttons & options/ice button@4x.png" type="Texture" id=3]
+[ext_resource path="res://buttons & options/Blank (3).png" type="Texture" id=4]
+[ext_resource path="res://buttons & options/snow@4x.png" type="Texture" id=5]
+[ext_resource path="res://map/Sky.png" type="Texture" id=6]
+[ext_resource path="res://fonts/boorsok.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://buttons & options/ice button2@4x.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+outline_size = 5
+font_data = ExtResource( 7 )
+
+[node name="game over winter" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -281.0
+margin_top = -275.0
+margin_right = 281.0
+margin_bottom = 275.0
+color = Color( 0.447059, 0.501961, 0.572549, 1 )
+
+[node name="container box" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -281.0
+margin_top = -281.0
+margin_right = 281.0
+margin_bottom = 281.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/container box"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.5
+margin_top = -109.0
+margin_right = 132.5
+margin_bottom = -3.0
+
+[node name="replay" type="Button" parent="CanvasLayer/container box/VBoxContainer"]
+margin_right = 265.0
+margin_bottom = 106.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Replay"
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/container box"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.5
+margin_top = 2.0
+margin_right = 132.5
+margin_bottom = 108.0
+
+[node name="select game" type="Button" parent="CanvasLayer/container box/VBoxContainer2"]
+margin_right = 265.0
+margin_bottom = 106.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Select Game"
+icon = ExtResource( 2 )
+flat = true
+icon_align = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/container box"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.5
+margin_top = 120.0
+margin_right = 132.5
+margin_bottom = 226.0
+
+[node name="main menu" type="Button" parent="CanvasLayer/container box/VBoxContainer3"]
+margin_right = 265.0
+margin_bottom = 106.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Main Menu"
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/container box"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -172.0
+margin_top = 53.0
+margin_right = 172.0
+margin_bottom = 164.0
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="CanvasLayer/container box/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = -65.5
+margin_right = 129.0
+margin_bottom = 75.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.231373, 0.513726, 0.564706, 1 )
+custom_colors/font_color_shadow = Color( 0.231373, 0.513726, 0.564706, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Game Over"
+align = 1
+valign = 1
+
+[node name="snow" type="TextureRect" parent="CanvasLayer"]
+margin_left = 327.0
+margin_top = 31.0
+margin_right = 963.0
+margin_bottom = 231.0
+texture = ExtResource( 5 )
+expand = true
+
+[connection signal="pressed" from="CanvasLayer/container box/VBoxContainer/replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="CanvasLayer/container box/VBoxContainer2/select game" to="." method="_on_select_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/container box/VBoxContainer3/main menu" to="." method="_on_main_menu_pressed"]

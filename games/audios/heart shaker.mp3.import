@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/heart shaker.mp3-c480ae6747affff7f7f533fbe7b90f3e.mp3str"
+
+[deps]
+
+source_file="res://audios/heart shaker.mp3"
+dest_files=[ "res://.import/heart shaker.mp3-c480ae6747affff7f7f533fbe7b90f3e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

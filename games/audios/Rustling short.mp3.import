@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rustling short.mp3-1c721413ebb6d9341eeaa894a45b95df.mp3str"
+
+[deps]
+
+source_file="res://audios/Rustling short.mp3"
+dest_files=[ "res://.import/Rustling short.mp3-1c721413ebb6d9341eeaa894a45b95df.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

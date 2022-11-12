@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Red Velvet Peek-A-Boo( Instrumental).mp3-b2a29a0c195e7c02e1b9e453a3a83957.mp3str"
+
+[deps]
+
+source_file="res://audios/Red Velvet Peek-A-Boo( Instrumental).mp3"
+dest_files=[ "res://.import/Red Velvet Peek-A-Boo( Instrumental).mp3-b2a29a0c195e7c02e1b9e453a3a83957.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

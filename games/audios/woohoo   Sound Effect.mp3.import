@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/woohoo   Sound Effect.mp3-32b11b769bc19cebbffc752386d0ad99.mp3str"
+
+[deps]
+
+source_file="res://audios/woohoo   Sound Effect.mp3"
+dest_files=[ "res://.import/woohoo   Sound Effect.mp3-32b11b769bc19cebbffc752386d0ad99.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

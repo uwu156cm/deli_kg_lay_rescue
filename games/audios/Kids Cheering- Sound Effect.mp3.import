@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kids Cheering- Sound Effect.mp3-fa8f594ef0859f9f751c25037cc81836.mp3str"
+
+[deps]
+
+source_file="res://audios/Kids Cheering- Sound Effect.mp3"
+dest_files=[ "res://.import/Kids Cheering- Sound Effect.mp3-fa8f594ef0859f9f751c25037cc81836.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
