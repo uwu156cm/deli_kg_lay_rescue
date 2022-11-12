@@ -33,7 +33,6 @@ position = Vector2( 7351.33, -117.375 )
 scale = Vector2( 0.44675, 0.469 )
 frames = SubResource( 1 )
 animation = "cheering"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -47,7 +46,6 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="A2D"]
 position = Vector2( 7316.62, -142.377 )
 rotation = 0.00932702
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="yay" type="Label" parent="A2D/CollisionShape2D"]

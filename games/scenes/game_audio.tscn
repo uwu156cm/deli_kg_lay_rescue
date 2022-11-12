@@ -17,7 +17,7 @@ anchor_bottom = 1.0
 
 [node name="Setting1" type="VBoxContainer" parent="GridContainer"]
 margin_right = 1280.0
-margin_bottom = 58.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 script = ExtResource( 2 )
 label = "Music"
@@ -40,16 +40,17 @@ max_value = 0.0
 [node name="Buttons" type="HBoxContainer" parent="GridContainer/Setting1"]
 margin_top = 38.0
 margin_right = 1280.0
-margin_bottom = 58.0
+margin_bottom = 38.0
 
 [node name="Play" type="Button" parent="GridContainer/Setting1/Buttons"]
+visible = false
 margin_right = 638.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Play"
 
 [node name="Mute" type="Button" parent="GridContainer/Setting1/Buttons"]
-margin_left = 642.0
+visible = false
 margin_right = 1280.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
